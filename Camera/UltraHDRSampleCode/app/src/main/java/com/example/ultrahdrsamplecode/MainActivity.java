@@ -133,7 +133,7 @@ public class MainActivity extends Activity {
                 if (map == null)
                     continue;
                 mPreviewSize = getOptimalSize(map.getOutputSizes(SurfaceTexture.class), width, height);
-                mJpegize = Collections.max(Arrays.asList(map.getOutputSizes(ImageFormat.JPEG_R)), new Comparator<Size>() {
+                mJpegize = Collections.max(Arrays.asList(map.getOutputSizes(ImageFormat.JPEG)), new Comparator<Size>() {
                     @Override
                     public int compare(Size lhs, Size rhs) {
                         return Long.signum(lhs.getWidth() * lhs.getHeight() - rhs.getHeight() * rhs.getWidth());
@@ -300,7 +300,7 @@ public class MainActivity extends Activity {
 
     private void setupImageReader() {
         mImageReader = ImageReader.newInstance(mJpegize.getWidth(), mJpegize.getHeight(),
-                ImageFormat.JPEG_R, 2);
+                ImageFormat.JPEG, 2);
         mImageReader.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() {
             @Override
             public void onImageAvailable(ImageReader reader) {

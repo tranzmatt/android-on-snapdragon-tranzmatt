@@ -3,12 +3,12 @@ plugins {
 }
 
 android {
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.ultrahdrsamplecode"
-        minSdk 30
-        targetSdk 34
+        minSdk 28
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -28,11 +28,12 @@ android {
     buildFeatures {
         viewBinding true
     }
+    namespace 'com.example.ultrahdrsamplecode'
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
