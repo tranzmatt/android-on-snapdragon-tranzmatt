@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+<com.example.lowlightboost.AutoFitTextureView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/textureView"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/lowlightboost_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff00"
+        android:textSize="13sp"
+        android:layout_marginTop="100dip"
+        android:layout_marginLeft="15dip" />
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+    <Button
+        android:id="@+id/snap_flashon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="captureWithFlashOn"
+        android:text="Snap_FlashON" />
+
+    <Button
+        android:id="@+id/snap_flashoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="captureWithFlashOff"
+        android:text="Snap_FlashOFF" />
+    </LinearLayout>
+
+</RelativeLayout>
